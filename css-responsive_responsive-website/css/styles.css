@@ -139,6 +139,15 @@ fairly essential to completing this challenge. */
   background: var(--navy-blue);
 }
 
+@media (min-width: 700px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 800px;
+  }
+}
+
 .intro-text {
   color: var(--dark-beige);
   font-size: var(--regular-text);
@@ -154,6 +163,13 @@ fairly essential to completing this challenge. */
   flex-direction: column;
 }
 
+@media (min-width: 700px) {
+  .card-section {
+    flex-direction: row;
+    heigth: 700px;
+  }
+}
+
 /* Product Card + Backgrounds */
 
 .product-card {
@@ -164,6 +180,13 @@ fairly essential to completing this challenge. */
   height: 250px;
   font-size: 1.5rem;
   box-shadow: 0px 0px 10px 0px var(--inky-black);
+}
+
+@media (min-with: 700px) {
+  .product-card {
+    flex-wrap: wrap;
+    justify-content: space-evently;
+  }
 }
 
 .--forest {
@@ -211,7 +234,13 @@ fairly essential to completing this challenge. */
   background: var(--inky-black);
   padding: var(--gap);
 }
-
+@media (min-width: 700px) {
+  .main-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+  }
+}
 .footer-nav {
   display: flex;
   flex-direction: column;
