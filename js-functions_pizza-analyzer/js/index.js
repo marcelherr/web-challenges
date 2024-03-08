@@ -26,3 +26,9 @@ function calculatePizzaGain() {}
 
 // Task 3
 // define the function updateOutputColor here
+
+// eventuell hilft das
+// button.addEventListener("click", () => {
+//   // Number(x) converts the string from the input to a number
+//   // Beware: input values are *always* strings!
+//   const age = Number(input.value);
