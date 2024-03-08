@@ -20,11 +20,15 @@ For that:
 */
 
 const progressBar = document.querySelector('[data-js="progress-bar"]');
+document.addEventListener("scroll", refreshProgressBar);
 const maxHeight = document.body.clientHeight;
 
-progressBar.style.width = scrollPercentage;
-
 function calculateScrollPercentage() {
-  const scrollPercentage = (maxHeight / 100) * myPosition;
+  const userPosition = window.scrollY;
+  const scrollPercentage = (userPosition / maxHeight) * 100;
   return scrollPercentage;
+}
+
+function refreshProgressBar() {
+  progressBar.style.width = calculateScrollPercentage() + "%";
 }
