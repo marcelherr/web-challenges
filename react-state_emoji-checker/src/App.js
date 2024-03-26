@@ -6,44 +6,23 @@ export default function App() {
   const [code, setCode] = useState("");
   const validCode = "🐡🐠🐋";
 
-  function handleClick() {
+  function handleClick(event) {
     setCode(code + event.target.textContent);
   }
   return (
     <div className="container">
       <div className="button-container">
-        <button
-          type="button"
-          onClick={() => {
-            handleClick();
-            console.log("Update Code!");
-            console.log(code);
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Pufferfish">
             🐡
           </span>
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            handleClick();
-            console.log("Update Code!");
-            console.log(code);
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Whale">
             🐋
           </span>
         </button>
-        <button
-          type="button"
-          onClick={() => {
-            handleClick();
-            console.log("Update Code!");
-            console.log(code);
-          }}
-        >
+        <button type="button" onClick={handleClick}>
           <span role="img" aria-label="Clownfish">
             🐠
           </span>
@@ -54,7 +33,6 @@ export default function App() {
         type="button"
         onClick={() => {
           setCode("");
-          console.log("Reset Code!");
         }}
       >
         Reset
