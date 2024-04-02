@@ -18,7 +18,11 @@ export default function App() {
   }
 
   useEffect(() => {
-    getISSCoords();
+    const timer = setInterval(() => {
+      getISSCoords();
+    }, 5000);
+
+    return () => clearInterval(timer);
   }, []);
 
   return (
