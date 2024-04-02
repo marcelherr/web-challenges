@@ -24,7 +24,11 @@ export default function PokemonList() {
 
   return (
     <main>
-      <button type="button" onClick={() => setPageId(pageId - 20)}>
+      <button
+        type="button"
+        hidden={pageId === 0}
+        onClick={() => setPageId(pageId - 20)}
+      >
         Previous Page
       </button>
       <button type="button" onClick={() => setPageId(pageId + 20)}>
