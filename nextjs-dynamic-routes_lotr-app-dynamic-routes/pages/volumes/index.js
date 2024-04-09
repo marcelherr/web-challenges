@@ -6,14 +6,15 @@ import Head from "next/head";
 export default function Volumes() {
   const router = useRouter();
 
-  // function getRandomElement(array) {
-  //   return array[Math.floor(Math.random() * array.length)];
-  // }
-  // function handleRandomCLick() {
-  //   const randomValue = getRandomElement();
-  //   // router.push(`/${randomValue}`);
-  //   console.log(randomValue);
-  // }
+  function getRandomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+  function handleRandomCLick() {
+    const randomValue = getRandomElement(volumes);
+    const pushValue = randomValue.slug;
+    console.log(randomValue.slug);
+    router.push(`/volumes/${pushValue}`);
+  }
 
   return (
     <>
@@ -29,7 +30,9 @@ export default function Volumes() {
           </li>
         ))}
       </ul>
-      <button type="button">Get Random Volume</button>
+      <button type="button" onClick={handleRandomCLick}>
+        Get Random Volume
+      </button>
     </>
   );
 }
