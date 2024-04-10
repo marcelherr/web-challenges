@@ -15,9 +15,11 @@ const StyledList = styled.ul`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
+  color: black;
 
   &:hover {
-    text-decoration: wavy underline;
+    color: darkgray;
+    text-decoration: lightgray wavy underline;
   }
 `;
 
