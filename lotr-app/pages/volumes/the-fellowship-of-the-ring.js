@@ -11,15 +11,17 @@ export default function HomePage() {
       <h1>{data.title}</h1>
       <p>{data.description}</p>{" "}
       <Image
-        src=""
-        width={"140px"}
-        height={"230px"}
+        src={data.cover}
+        width={"140"}
+        height={"230"}
         alt="the image of the book"
       ></Image>
       <ul>
         {data.books.map((book) => (
           <li key={book.ordinal}>
-            <h2>{book.title}</h2>
+            <h2>
+              {book.ordinal}:{book.title}
+            </h2>
           </li>
         ))}
       </ul>
