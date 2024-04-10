@@ -12,7 +12,6 @@ export default function Volumes() {
   function handleRandomCLick() {
     const randomValue = getRandomElement(volumes);
     const pushValue = randomValue.slug;
-    console.log(randomValue.slug);
     router.push(`/volumes/${pushValue}`);
   }
 
