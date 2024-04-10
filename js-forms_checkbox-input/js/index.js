@@ -27,6 +27,6 @@ form.addEventListener("submit", (event) => {
 });
 
 tosCheckbox.addEventListener("input", (event) => {
-  hideTosError();
-  showTosError();
+  hideTosError(event);
+  showTosError(event);
 });

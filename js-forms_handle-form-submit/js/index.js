@@ -10,4 +10,10 @@ form.addEventListener("submit", (event) => {
   console.log(data);
   formElements.firstName.focus();
   event.target.reset();
+
+  const x = parseInt(data.badness);
+  const y = parseInt(data.age);
+
+  let sum = x + y;
+  console.log(sum);
 });
