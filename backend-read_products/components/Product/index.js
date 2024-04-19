@@ -2,6 +2,7 @@ import useSWR from "swr";
 import { useRouter } from "next/router";
 import { ProductCard } from "./Product.styled";
 import { StyledLink } from "../Link/Link.styled";
+import { StyledList } from "../ProductList/ProductList.styled";
 
 export default function Product() {
   const router = useRouter();
@@ -16,14 +17,24 @@ export default function Product() {
   if (!data) {
     return;
   }
-
+  console.log(data.reviews);
   return (
+    //mappen und dann is gut
     <ProductCard>
       <h2>{data.name}</h2>
       <p>Description: {data.description}</p>
       <p>
         Price: {data.price} {data.currency}
       </p>
+      <StyledList>
+        {data.reviews.map((review) => (
+          <li key={review._id}>
+            <p>{review.title}</p>
+            <p>{review.rating}</p>
+            <p>{review.text}</p>
+          </li>
+        ))}
+      </StyledList>
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );
